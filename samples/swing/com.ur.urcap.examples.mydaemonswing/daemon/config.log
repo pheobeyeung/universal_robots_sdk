@@ -1,0 +1,3 @@
+file /workspaces/samples/swing/com.ur.urcap.examples.mydaemonswing/daemon/SConstruct,line 54:
+	Configure(confdir = .sconf_temp)
+

@@ -1,0 +1,8 @@
+/workspaces/samples/swing/com.ur.urcap.examples.tooliocontrolswing/src/main/java/com/ur/urcap/examples/tooliocontrol/Activator.java
+/workspaces/samples/swing/com.ur.urcap.examples.tooliocontrolswing/src/main/java/com/ur/urcap/examples/tooliocontrol/installation/ToolIOControlInstallationNodeService.java
+/workspaces/samples/swing/com.ur.urcap.examples.tooliocontrolswing/src/main/java/com/ur/urcap/examples/tooliocontrol/program/ToolIOControlProgramNodeContribution.java
+/workspaces/samples/swing/com.ur.urcap.examples.tooliocontrolswing/src/main/java/com/ur/urcap/examples/tooliocontrol/installation/ToolIOControlInstallationNodeView.java
+/workspaces/samples/swing/com.ur.urcap.examples.tooliocontrolswing/src/main/java/com/ur/urcap/examples/tooliocontrol/program/ToolIOControlProgramNodeService.java
+/workspaces/samples/swing/com.ur.urcap.examples.tooliocontrolswing/src/main/java/com/ur/urcap/examples/tooliocontrol/installation/ToolIOControlInstallationNodeContribution.java
+/workspaces/samples/swing/com.ur.urcap.examples.tooliocontrolswing/src/main/java/com/ur/urcap/examples/tooliocontrol/installation/ToolIOController.java
+/workspaces/samples/swing/com.ur.urcap.examples.tooliocontrolswing/src/main/java/com/ur/urcap/examples/tooliocontrol/program/ToolIOControlProgramNodeView.java

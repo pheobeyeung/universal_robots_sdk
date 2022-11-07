@@ -1,0 +1,42 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1667837996790
+Build-Jdk: 1.8.0_342
+Built-By: root
+Bundle-Activator: com.ur.urcap.examples.tooliocontrol.Activator
+Bundle-Category: URCap
+Bundle-ContactAddress: Energivej 25, 5260 Odense S, Denmark
+Bundle-Copyright: Copyright (C) 2009-2022 Universal Robots. All Rights R
+ eserved
+Bundle-Description: Tool I/O interface control sample URCap
+Bundle-LicenseType: Sample license
+Bundle-ManifestVersion: 2
+Bundle-Name: Tool I/O Control Swing
+Bundle-SymbolicName: com.ur.urcap.examples.tooliocontrolswing
+Bundle-Vendor: Universal Robots
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.ur.urcap.examples.tooliocontrol;version="1.0.0.SNAPS
+ HOT";uses:="org.osgi.framework",com.ur.urcap.examples.tooliocontrol.ins
+ tallation;version="1.0.0.SNAPSHOT";uses:="com.ur.urcap.api.contribution
+ ,com.ur.urcap.api.contribution.installation,com.ur.urcap.api.contributi
+ on.installation.swing,com.ur.urcap.api.domain.data,com.ur.urcap.api.dom
+ ain.script,javax.swing",com.ur.urcap.examples.tooliocontrol.program;ver
+ sion="1.0.0.SNAPSHOT";uses:="com.ur.urcap.api.contribution,com.ur.urcap
+ .api.contribution.program,com.ur.urcap.api.contribution.program.swing,c
+ om.ur.urcap.api.domain.data,com.ur.urcap.api.domain.script,javax.swing"
+Import-Package: com.ur.urcap.api.contribution;version="[1.7,2)",com.ur.u
+ rcap.api.contribution.installation;version="[1.7,2)",com.ur.urcap.api.c
+ ontribution.installation.swing;version="[1.7,2)",com.ur.urcap.api.contr
+ ibution.program;version="[1.7,2)",com.ur.urcap.api.contribution.program
+ .swing;version="[1.7,2)",com.ur.urcap.api.domain;version="[1.7,2)",com.
+ ur.urcap.api.domain.data;version="[1.7,2)",com.ur.urcap.api.domain.reso
+ urce;version="[1.7,2)",com.ur.urcap.api.domain.resource.tooliointerface
+ ;version="[1.7,2)",com.ur.urcap.api.domain.resource.tooliointerface.con
+ trol;version="[1.7,2)",com.ur.urcap.api.domain.robot;version="[1.7,2)",
+ com.ur.urcap.api.domain.script;version="[1.7,2)",com.ur.urcap.api.domai
+ n.system.capability;version="[1.7,2)",com.ur.urcap.api.domain.system.ca
+ pability.tooliointerface;version="[1.7,2)",javax.swing,org.osgi.framewo
+ rk;version="[1.6,2)"
+Tool: Bnd-2.1.0.20130426-122213
+URCapCompatibility-CB3: true
+URCapCompatibility-eSeries: true

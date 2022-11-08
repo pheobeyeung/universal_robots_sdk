@@ -73,7 +73,7 @@ RUN apt-get -y update \
 && mvn install:install-file -Dfile=artifacts/other/xmlrpc-client-3.1.3.0.jar -DgroupId=org.apache.xmlrpc -DartifactId=xmlrpc-client -Dversion=3.1.3.0 -Dpackaging=jar -q \
 && mvn install:install-file -Dfile=artifacts/other/xmlrpc-common-3.1.3.0.jar -DgroupId=org.apache.xmlrpc -DartifactId=xmlrpc-common -Dversion=3.1.3.0 -Dpackaging=jar -q \
 && cd /sdk-1.13.0/samples 
-EXPOSE 3000
+EXPOSE 8000
 
 
 

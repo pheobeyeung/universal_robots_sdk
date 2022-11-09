@@ -72,8 +72,13 @@ RUN apt-get -y update \
 && mvn install:install-file -Dfile=artifacts/other/ws-commons-util-1.0.2.0.jar -DgroupId=org.apache.ws.commons.util -DartifactId=ws-commons-util -Dversion=1.0.2.0 -Dpackaging=jar -q \
 && mvn install:install-file -Dfile=artifacts/other/xmlrpc-client-3.1.3.0.jar -DgroupId=org.apache.xmlrpc -DartifactId=xmlrpc-client -Dversion=3.1.3.0 -Dpackaging=jar -q \
 && mvn install:install-file -Dfile=artifacts/other/xmlrpc-common-3.1.3.0.jar -DgroupId=org.apache.xmlrpc -DartifactId=xmlrpc-common -Dversion=3.1.3.0 -Dpackaging=jar -q \
-&& cd /sdk-1.13.0/samples 
+&& rm -rf samples \
+&& rm -rf doc \
+&& rm -rf urtool \
+&& rm install.sh \
+&& rm readme.txt
 EXPOSE 8000
+
 
 
 

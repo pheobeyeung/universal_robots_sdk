@@ -1,5 +1,6 @@
 # FROM scratch
-FROM ubuntu:18.04 
+FROM universalrobots/ursim_e-series
+# FROM ubuntu:18.04 
 #CMD ["bash"]
 ENV HOME=/sdk-1.13.0
 RUN apt-get -y update \
@@ -7,6 +8,7 @@ RUN apt-get -y update \
 && apt install -y software-properties-common \
 && apt install -y apt-transport-https \
 && apt-get install -y apt-utils \
+&& apt-get install -y xdg-utils \
 && apt-get install -y nodejs \
 && apt-get install -y dialog \
 && apt-get install -y ant \
@@ -20,7 +22,7 @@ RUN apt-get -y update \
 && curl https://s3-eu-west-1.amazonaws.com/ur-support-site/115819/sdk-1.13.0.zip -o sdk-1.13.0.zip \
 && unzip sdk-1.13.0.zip -d /sdk-1.13.0 \
 && rm sdk-1.13.0.zip \
-&& cd /sdk-1.13.0 \
+&& cd /sdk-1.13.0/ \
 && mvn install:install-file -Dfile=artifacts/api/1.13.0/com.ur.urcap.api-1.13.0.jar -DgroupId=com.ur.urcap -DartifactId=api -Dversion=1.13.0 -Dpackaging=jar -q \
 && mvn install:install-file -Dfile=artifacts/api/1.13.0/com.ur.urcap.api-1.13.0-javadoc.jar -DgroupId=com.ur.urcap -DartifactId=api -Dversion=1.13.0 -Dpackaging=jar -Dclassifier=javadoc -q \
 && mvn install:install-file -Dfile=artifacts/api/1.13.0/com.ur.urcap.api-1.13.0-sources.jar -DgroupId=com.ur.urcap -DartifactId=api -Dversion=1.13.0 -Dpackaging=jar -Dclassifier=sources -q \
@@ -78,9 +80,3 @@ RUN apt-get -y update \
 && rm install.sh \
 && rm readme.txt
 EXPOSE 8000
-
-
-
-
-
- 

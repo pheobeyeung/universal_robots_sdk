@@ -79,4 +79,3 @@ RUN apt-get -y update \
 && rm -rf urtool \
 && rm install.sh \
 && rm readme.txt
-EXPOSE 8000

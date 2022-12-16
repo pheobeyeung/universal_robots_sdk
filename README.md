@@ -1,4 +1,4 @@
-#Universal Robots SDK
+# Universal Robots SDK
 This is the Universal Robots SDK, integrated into a Visual Studio Code development container through Docker. This allows developers and users to develop and deploy URCaps more efficiently, without requiring a virtual machine. 
 
 _**Prerequisites:** You must have [Git](https://git-scm.com/downloads), [Visual Studio Code](https://code.visualstudio.com/download), and [Docker](https://www.docker.com/products/docker-desktop/) installed and configured._
@@ -9,7 +9,7 @@ If you are using Windows, you need to perform these steps before proceeding:
 2. Run ```git config --system core.longpaths true``` in the terminal.
    
 
-##Setup
+## Setup
 1. Open Docker Desktop to ensure that the program is running.
 2. Install the [Remote Development extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) for Visual Studio Code.
 3. Open Visual Studio Code.
@@ -23,19 +23,19 @@ If you are using Windows, you need to perform these steps before proceeding:
 7. Type ```Ctrl+`+Shift``` to open the Terminal. Congrats! The SDK environment is now successfully setup!
 
 
-##Development
+## Development
 The [Universal Robots API](https://www.universal-robots.com/articles/ur/urplus-resources/api-reference-docs/) provides insight to the capabilities of what you can do with a URCap. There are also PDF tutorials in the ```/universal_robots_sdk/doc``` folder as well.
 URCap java swing examples can be found in the ```/universal_robots_sdk/samples/swing``` folder. 
 
 
-####New URCap
+#### New URCap
 In order to create a new URCap, enter these commands:
 ```$ cd ~/universal_robots_sdk```
 ```$ ./newURCap.sh```
 
 Fill out the appropriate forms and generate a new maven project. 
 
-####Build URCap
+#### Build URCap
 In order to build the URCap, navigate to the folder that contains the project folder. This folder should contain the pom.xml file. From there, edit the pom.xml file so that the line that asks for: 
 ```<ursim.home></ursim.home>``` on line 38 is replaced with 
 ```<ursim.home>/ursim</ursim.home>```
@@ -49,7 +49,7 @@ To build URCap without deploying to URSim, run this command in the terminal:
 ```mvn install```
 The .urcap file can be found in the /target folder of the project folder.
 
-####URSim
+#### URSim
 To run URSim, run these commands in the terminal:
 ```$ cd /universal_robots_sdk```
 ```$ ./startURSim.sh```

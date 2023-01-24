@@ -7,6 +7,7 @@ _**Prerequisites:** You must have [Git](https://git-scm.com/downloads), [Visual 
 If you are using Windows, you need to perform these steps before proceeding:
 1. Open Git Bash from the Start menu as adminstrator.
 2. Run ```git config --system core.longpaths true``` in the terminal.
+3. Ensure that you wsl engine is installed correctly and up to date.
    
 
 ## Setup

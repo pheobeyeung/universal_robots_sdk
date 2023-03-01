@@ -17,6 +17,8 @@ RUN apt-get -y update \
 && apt-get install -y unzip \
 && apt-get install -y python \
 && apt-get install -y maven \
+&& apt-get install -y openssh-client \
+&& apt-get install -y sshpass \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/* \
 && curl https://s3-eu-west-1.amazonaws.com/ur-support-site/115819/sdk-1.13.0.zip -o sdk-1.13.0.zip \

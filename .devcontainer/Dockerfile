@@ -1,10 +1,16 @@
+
+
 # FROM scratch
 FROM universalrobots/ursim_e-series
 # FROM ubuntu:18.04 
 #CMD ["bash"]
 ENV HOME=/sdk-1.13.0
+ENV URTOOL_ROOT=/opt/urtool-3.0 \
+    URTOOL_TARGET=i686-unknown-linux-gnu- \
+    PATH="${PATH}:/opt/urtool-3.0/bin"
 RUN apt-get -y update \
-&& apt-get install -y openjdk-8-jdk \
+&& apt-get -y upgrade \
+#&& apt-get install -y openjdk-8-jdk \
 && apt install -y software-properties-common \
 && apt install -y apt-transport-https \
 && apt-get install -y apt-utils \
@@ -15,7 +21,7 @@ RUN apt-get -y update \
 && apt-get install -y curl \
 && apt-get install -y libcurl4 \
 && apt-get install -y unzip \
-&& apt-get install -y python \
+#&& apt-get install -y python \
 && apt-get install -y maven \
 && apt-get install -y openssh-client \
 && apt-get install -y sshpass \
@@ -81,3 +87,4 @@ RUN apt-get -y update \
 && rm -rf urtool \
 && rm install.sh \
 && rm readme.txt
+

@@ -3,8 +3,12 @@ FROM universalrobots/ursim_e-series
 # FROM ubuntu:18.04 
 #CMD ["bash"]
 ENV HOME=/sdk-1.13.0
+ENV URTOOL_ROOT=/opt/urtool-3.0 \
+    URTOOL_TARGET=i686-unknown-linux-gnu- \
+    PATH="${PATH}:/opt/urtool-3.0/bin"
 RUN apt-get -y update \
-&& apt-get install -y openjdk-8-jdk \
+&& apt-get -y upgrade \
+#&& apt-get install -y openjdk-8-jdk \
 && apt install -y software-properties-common \
 && apt install -y apt-transport-https \
 && apt-get install -y apt-utils \
@@ -15,11 +19,10 @@ RUN apt-get -y update \
 && apt-get install -y curl \
 && apt-get install -y libcurl4 \
 && apt-get install -y unzip \
-&& apt-get install -y python \
+#&& apt-get install -y python \
 && apt-get install -y maven \
 && apt-get install -y openssh-client \
 && apt-get install -y sshpass \
-&& apt-get install -y git \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/* \
 && curl https://s3-eu-west-1.amazonaws.com/ur-support-site/115819/sdk-1.13.0.zip -o sdk-1.13.0.zip \
@@ -64,7 +67,7 @@ RUN apt-get -y update \
 && mvn install:install-file -Dfile=artifacts/api/1.3.0/com.ur.urcap.api-1.3.0.jar -DgroupId=com.ur.urcap -DartifactId=api -Dversion=1.3.0 -Dpackaging=jar -q \
 && mvn install:install-file -Dfile=artifacts/api/1.3.0/com.ur.urcap.api-1.3.0-javadoc.jar -DgroupId=com.ur.urcap -DartifactId=api -Dversion=1.3.0 -Dpackaging=jar -Dclassifier=javadoc -q \
 && mvn install:install-file -Dfile=artifacts/api/1.3.0/com.ur.urcap.api-1.3.0-sources.jar -DgroupId=com.ur.urcap -DartifactId=api -Dversion=1.3.0 -Dpackaging=jar -Dclassifier=sources -q \
-&& mvn install:install-file -Dfile=artifacts/api/1.2.56/com.ur.urcap.api-1.2.56.jar -DgroupId=com.ur.urcap -DartifactId=api -Dversion=1.2.56 -Dpackaging=jar -q \
+&& mvn install:install-file -Dfile=artifacts/api/1.2.56/cosm.ur.urcap.api-1.2.56.jar -DgroupId=com.ur.urcap -DartifactId=api -Dversion=1.2.56 -Dpackaging=jar -q \
 && mvn install:install-file -Dfile=artifacts/api/1.2.56/com.ur.urcap.api-1.2.56-javadoc.jar -DgroupId=com.ur.urcap -DartifactId=api -Dversion=1.2.56 -Dpackaging=jar -Dclassifier=javadoc -q \
 && mvn install:install-file -Dfile=artifacts/api/1.2.56/com.ur.urcap.api-1.2.56-sources.jar -DgroupId=com.ur.urcap -DartifactId=api -Dversion=1.2.56 -Dpackaging=jar -Dclassifier=sources -q \
 && mvn install:install-file -Dfile=artifacts/api/1.1.0/com.ur.urcap.api-1.1.0-69.jar -DgroupId=com.ur.urcap -DartifactId=api -Dversion=1.1.0-69 -Dpackaging=jar -q \

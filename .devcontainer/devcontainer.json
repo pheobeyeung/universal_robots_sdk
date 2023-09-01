@@ -1,10 +1,9 @@
 {
 	"name": "UR SDK",
 	"build":{"dockerfile": "Dockerfile"},
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"settings": {
-		"remote.autoForwardPorts": false
+  	// Use the LOCAL_WORKSPACE_FOLDER environment variable if you need to bind mount local source code into container.
+	"remoteEnv": {
+		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
 	},
 	 "postStartCommand": "chmod +x newURCap.sh && chmod +x startURSim.sh",
 	 "customizations": {
@@ -15,10 +14,6 @@
 			  "redhat.java", "vscjava.vscode-java-debug", "vscjava.vscode-maven", "ahern.urscript",
 			  "yzhang.markdown-all-in-one"]
         }
-      },
-
-	  // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-    // "remoteUser": "urcapdev"
+      }
 }
-
 

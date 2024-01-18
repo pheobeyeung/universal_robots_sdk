@@ -17,6 +17,7 @@ RUN apt-get -y update \
 && apt-get install -y unzip \
 && apt-get install -y maven \
 && apt-get install -y sshpass \
+&& apt-get install -y git \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/* 
 

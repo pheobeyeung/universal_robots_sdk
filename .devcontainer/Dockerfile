@@ -4,7 +4,7 @@
 FROM universalrobots/ursim_e-series
 # FROM ubuntu:18.04 
 #CMD ["bash"]
-ENV HOME=/sdk-1.13.0
+ENV HOME=/sdk-1.14.0
 ENV URTOOL_ROOT=/opt/urtool-3.0 \
     URTOOL_TARGET=i686-unknown-linux-gnu- \
     PATH="${PATH}:/opt/urtool-3.0/bin"
@@ -20,9 +20,9 @@ RUN apt-get -y update \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/* 
 
-RUN curl https://s3-eu-west-1.amazonaws.com/ur-support-site/115819/sdk-1.13.0.zip -o sdk-1.13.0.zip \
-&& unzip sdk-1.13.0.zip -d /sdk-1.13.0 \
-&& rm sdk-1.13.0.zip \
-&& cd /sdk-1.13.0 \
+RUN curl https://urplus-developer-site.s3.eu-west-1.amazonaws.com/sdk/sdk-1.14.0.zip -o sdk-1.14.0.zip \
+&& unzip sdk-1.14.0.zip -d /sdk-1.14.0 \
+&& rm sdk-1.14.0.zip \
+&& cd /sdk-1.14.0 \
 && yes | ./install.sh
 

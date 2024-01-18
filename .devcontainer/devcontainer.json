@@ -9,11 +9,14 @@
 	 "customizations": {
         // Configure properties specific to VS Code.
         "vscode": {
+			"settings": {
+				"dev.containers.mountWaylandSocket": false
+			},		
           // Add the IDs of extensions you want installed when the container is created.
-          "extensions": ["donjayamanne.python-extension-pack", "ms-python.python", "ms-vscode.cpptools",
-			  "redhat.java", "vscjava.vscode-java-debug", "vscjava.vscode-maven", "ahern.urscript",
-			  "yzhang.markdown-all-in-one"]
-        }
+			"extensions": ["donjayamanne.python-extension-pack", "ms-python.python", "ms-vscode.cpptools",
+				"redhat.java", "vscjava.vscode-java-debug", "vscjava.vscode-maven", "ahern.urscript",
+				"yzhang.markdown-all-in-one"]
+			}	
       }
 }
 

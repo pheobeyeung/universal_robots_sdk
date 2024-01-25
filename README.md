@@ -26,8 +26,8 @@ If you are using Windows, you need to perform these steps before proceeding:
 
 ## Development
 The [Universal Robots API](https://www.universal-robots.com/articles/ur/urplus-resources/api-reference-docs/) provides insight to the capabilities of what you can do with a URCap. There are also PDF tutorials in the ```/universal_robots_sdk/doc``` folder as well.
-URCap java swing examples can be found in the ```/universal_robots_sdk/samples/swing``` folder. 
-
+URCap java swing examples can be found in the ```/universal_robots_sdk/samples/``` folder. 
+The ```myURCaps/``` folder is referenced in the .gitignore file, meaning that the contents are not tracked by git. Put your own projects inside this directory to ensure that it is unaffected when pulling SDK updates.
 
 #### New URCap
 In order to create a new URCap, enter these commands:

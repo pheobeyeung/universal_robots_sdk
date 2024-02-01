@@ -16,6 +16,7 @@ RUN apt-get -y update \
 && apt-get install -y ant \
 && apt-get install -y unzip \
 && apt-get install -y maven \
+&& apt-get install -y xdg-utils \
 && apt-get install -y sshpass \
 && apt-get install -y git \
 && apt-get clean \

@@ -216,7 +216,7 @@ if [[ -z $1 ]] || [[ "$1" != "-t" ]]; then
 	exec 3>&1
 	# Store data to $VALUES variable
 	VALUES=$(dialog --ok-label "Ok" \
-		  --separator "¤" \
+		  --separator ";" \
 		  --backtitle "URCap Project Creator" \
 		  --title "Project Configuration" \
 		  --form "Create a new project" \
@@ -233,7 +233,7 @@ if [[ -z $1 ]] || [[ "$1" != "-t" ]]; then
 		exit 1
 	fi
 
-	IFS='¤' read -ra VAL_ARRAY1 <<< $VALUES
+	IFS=';' read -ra VAL_ARRAY1 <<< "$VALUES"
 
 	mygroupid=${VAL_ARRAY1[0]}
 	myartifactid=${VAL_ARRAY1[1]}

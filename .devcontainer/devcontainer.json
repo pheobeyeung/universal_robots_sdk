@@ -10,7 +10,8 @@
         // Configure properties specific to VS Code.
         "vscode": {
 			"settings": {
-				"dev.containers.mountWaylandSocket": false
+				"dev.containers.mountWaylandSocket": false,
+				"extensions.verifySignature": false
 			},		
           // Add the IDs of extensions you want installed when the container is created.
 			"extensions": ["donjayamanne.python-extension-pack", "ms-python.python", "ms-vscode.cpptools",

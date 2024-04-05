@@ -1,0 +1,10 @@
+/workspaces/universal_robots_sdk/samples/com.ur.urcap.examples.helloworldswing/src/main/java/com/ur/urcap/examples/helloworldswing/impl/Activator.java
+/workspaces/universal_robots_sdk/samples/com.ur.urcap.examples.helloworldswing/src/main/java/com/ur/urcap/examples/helloworldswing/impl/HelloWorldInstallationNodeContribution.java
+/workspaces/universal_robots_sdk/samples/com.ur.urcap.examples.helloworldswing/src/main/java/com/ur/urcap/examples/helloworldswing/impl/HelloWorldProgramNodeContribution.java
+/workspaces/universal_robots_sdk/samples/com.ur.urcap.examples.helloworldswing/src/main/java/com/ur/urcap/examples/helloworldswing/impl/V5Style.java
+/workspaces/universal_robots_sdk/samples/com.ur.urcap.examples.helloworldswing/src/main/java/com/ur/urcap/examples/helloworldswing/impl/Style.java
+/workspaces/universal_robots_sdk/samples/com.ur.urcap.examples.helloworldswing/src/main/java/com/ur/urcap/examples/helloworldswing/impl/HelloWorldProgramNodeService.java
+/workspaces/universal_robots_sdk/samples/com.ur.urcap.examples.helloworldswing/src/main/java/com/ur/urcap/examples/helloworldswing/impl/HelloWorldInstallationNodeView.java
+/workspaces/universal_robots_sdk/samples/com.ur.urcap.examples.helloworldswing/src/main/java/com/ur/urcap/examples/helloworldswing/impl/HelloWorldInstallationNodeService.java
+/workspaces/universal_robots_sdk/samples/com.ur.urcap.examples.helloworldswing/src/main/java/com/ur/urcap/examples/helloworldswing/impl/HelloWorldProgramNodeView.java
+/workspaces/universal_robots_sdk/samples/com.ur.urcap.examples.helloworldswing/src/main/java/com/ur/urcap/examples/helloworldswing/impl/V3Style.java

@@ -38,7 +38,7 @@
 		<ursim.home></ursim.home>
 
 		<!--Host and standard user/password for UR Sim running in a VM-->
-		<ursimvm.install.host></ursimvm.install.host>
+		<ursimvm.install.host>192.168.56.101</ursimvm.install.host>
 		<ursimvm.install.username>ur</ursimvm.install.username>
 		<ursimvm.install.password>easybot</ursimvm.install.password>
 
@@ -289,7 +289,7 @@
 								</goals>
 								<configuration>
 									<executable>sshpass</executable>
-									<commandlineArgs>-p ${ursimvm.install.password} scp -o StrictHostKeyChecking=no target/${project.build.finalName}.jar ${ursimvm.install.username}@${ursimvm.install.host}:/home/ur/ursim-current/.urcaps/${urcap.symbolicname}.jar</commandlineArgs>
+									<commandlineArgs>-p ${ursimvm.install.password} scp -o StrictHostKeyChecking=no target/${project.build.finalName}.jar ${ursimvm.install.username}@${ursimvm.install.host}:/ursim/.urcaps/${urcap.symbolicname}.jar</commandlineArgs>
 									<workingDirectory>.</workingDirectory>
 								</configuration>
 							</execution>

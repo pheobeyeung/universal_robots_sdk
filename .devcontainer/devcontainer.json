@@ -19,8 +19,8 @@
 				"yzhang.markdown-all-in-one"]
 			}	
       }, 
-	  "runArgs": ["--network=ursim_net" ],
-	  "postStartCommand": "/app/entrypoint.sh"
+	//   "runArgs": ["--network=ursim_net" ],
+	//   "postStartCommand": "/app/entrypoint.sh"
 
 }
 

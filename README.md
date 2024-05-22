@@ -1,13 +1,12 @@
 # Universal Robots SDK
-This is the Universal Robots SDK, integrated into a Visual Studio Code development container through Docker. This allows developers and users to develop and deploy URCaps more efficiently, without requiring a virtual machine. 
+This is the Universal Robots SDK, integrated into a Visual Studio Code development container through Docker with support for the **Apple Silicon ARM architecture**. This allows developers and users to develop and deploy URCaps more efficiently, without requiring a virtual machine. 
 
 _**Prerequisites:** You must have [Git](https://git-scm.com/downloads), [Visual Studio Code](https://code.visualstudio.com/download), and [Docker](https://www.docker.com/products/docker-desktop/) installed and configured._
 
 
-If you are using Windows, you need to perform these steps before proceeding:
-1. Open Git Bash from the Start menu as adminstrator.
-2. Run ```git config --system core.longpaths true``` in the terminal.
-3. Ensure that your wsl engine is installed correctly and up to date.
+DISCLAIMERS:
+1. You must disable the *Rosetta for x86_64/amd64 emulation on Apple Silicon* in your [Docker settings](https://docs.docker.com/desktop/settings/mac/).
+2. The UI and performance on URSim will be extremely hindered. It is a pain, but just something that needs to be muscled through. 
    
 
 ## Setup

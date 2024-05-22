@@ -5,6 +5,11 @@
 	"remoteEnv": {
 		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
 	},
+	"containerEnv": {
+		"SHELL": "/bin/bash",
+		"DEV_CONTAINER": "true",
+		"containerWorkspaceFolder": "${containerWorkspaceFolder}"
+	  },
 	// "postStartCommand": "chmod +x newURCap.sh && chmod +x startURSim.sh",
 	 "customizations": {
         // Configure properties specific to VS Code.
@@ -18,7 +23,7 @@
 				"redhat.java", "vscjava.vscode-java-debug", "vscjava.vscode-maven", "ahern.urscript",
 				"yzhang.markdown-all-in-one"]
 			}	
-      }, 
+      },
 	//   "runArgs": ["--network=ursim_net" ],
 	//   "postStartCommand": "/app/entrypoint.sh"
 

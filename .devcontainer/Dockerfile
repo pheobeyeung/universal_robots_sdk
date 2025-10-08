@@ -5,8 +5,8 @@ ENV URTOOL_ROOT=/opt/urtool-3.0 \
     PATH="${PATH}:/opt/urtool-3.0/bin"
 ENV URSIM=/ursim 
 
-ARG url=https://s3-eu-west-1.amazonaws.com/ur-support-site/115819/sdk-1.17.0.zip
-ARG sdk_version=sdk-1.17.0
+ARG url=https://s3-eu-west-1.amazonaws.com/ur-support-site/115819/sdk-1.18.0.zip
+ARG sdk_version=sdk-1.18.0
 
 RUN set -ex; \
     apt-get -y update; \

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Position</title>
+	<style>
+
+		.coordinate {
+			font-weight: bold;
+			height: 28px;
+			width: 240px;
+			text-align: left;
+
+		}
+
+		.padding {
+			padding-left: 170px;
+		}
+
+		.cooordinatecolumn {
+			display: inline-block;
+			width: 240px;
+		}
+
+	</style>
+</head>
+<body>
+<form>
+	<h1>Coordinate Map</h1>
+	<label>Press on the image to get its touch coordinates</label>
+	<div>
+		<img id="img"  height="351" width="501"/>
+	</div>
+
+	<div style="width: 501px">
+		<div class="cooordinatecolumn" >
+			<label class="coordinate padding" id="x-coordinate">x=</label>
+		</div>
+		<div class="cooordinatecolumn">
+			<label class="coordinate" id="y-coordinate">y=</label>
+		</div>
+	</div>
+
+</form>
+</body>
+</html>

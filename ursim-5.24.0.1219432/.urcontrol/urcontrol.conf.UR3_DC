@@ -1,0 +1,63 @@
+#
+# NOTE: The SafetyParameters section is protected by a CRC checksum,
+# please use the supplied tool "update_urcontrol_crc.py" in a terminal.
+
+## SafetyParameters ##
+
+[Hardware]
+robot_type = 3 # UR3_DC
+
+[DH]
+a = [0.0, -0.24355, -0.2132, 0.0, 0.0, 0.0]
+d = [0.15185, 0.0, 0.0, 0.13105, 0.08535, 0.0921]
+alpha = [1.570796327, 0, 0, 1.570796327, -1.570796327, 0]
+q_home_offset = [0, -1.570796327, 0, -1.570796327, 0, 0]
+joint_direction = [1, 1, -1, 1, 1, 1]
+
+[Link]
+mass = [1.98, 3.4445, 1.437, 0.871, 0.805, 0.261]
+center_of_mass = [[0, -0.02, 0], [0.13, 0, 0.1157], [0.05, 0, 0.0238], [0, 0, 0.01], [0, 0, 0.01], [0, 0, -0.02]]
+inertia_matrix = [[0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0.000144]]
+
+[Geometry]
+radius_wrist3       = 0.0315
+radius_lower_arm    = 0.027
+offset_x3_lower_arm = 0.027
+
+[Elbow]
+offset = [0, 0, 0.08]
+radius = 0.1
+
+[Joint]
+joint = ['joint_size2_eseries.conf', 'joint_size2_eseries.conf', 'joint_size1_eseries.conf', 'joint_size0_eseries.conf', 'joint_size0_eseries.conf', 'joint_size0_eseries.conf']
+
+## SafetyParameters ##
+
+[Checksum]
+RobotConfig = 4146941557
+
+[Joint]
+v_joint_default = 1.0471975511965976
+a_joint_default = 1.3962634015954636
+
+[Tool]
+tcp_pose = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+tcp_payload_mass = 0
+v_tool_default = 0.25
+a_tool_default = 1.2
+eqradius = 0.25
+
+[Link]
+gravity = [0, 0, 9.82]
+
+[Hardware]
+power_supply = 600
+robot_sub_type = 3
+
+[Energy Eater]
+avg_time = 5.0
+energy_eater_type = [0, 1]
+
+[Fan Control]
+ramup_time = 1.0
+ramdown_time = 50.0

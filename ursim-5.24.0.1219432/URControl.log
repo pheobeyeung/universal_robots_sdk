@@ -1,0 +1,75 @@
+2026-02-13_22:09:40:35348 00:00:00:000 INFO    - Marketing Ver = 5.24.0
+2026-02-13_22:09:40:36454 00:00:00:000 INFO    - parseOpts(): The following ports will be used: Primary - 30001, Secondary - 30002, Interpreter - 30020, Matlab - 30003, RTDE - 30004, Primary_read_only - 30011, Secondary_read_only - 30012, Matlab_read_only - 30013.
+2026-02-13_22:09:40:36466 00:00:00:000 INFO    - ConfigurationManager::loadConfiguration: Loading urcontrol.conf from: /workspaces/universal_robots_sdk/ursim-5.24.0.1219432/.urcontrol/urcontrol.conf.
+2026-02-13_22:09:40:37336 00:00:00:000 WARNING - Configuration property "resistance" not found in section "Energy Eater"; setting to default value: "0"
+2026-02-13_22:09:40:38232 00:00:00:000 WARNING - readLastSeenJointPositions: Error: Cannot open configuration file '/workspaces/universal_robots_sdk/ursim-5.24.0.1219432/.urcontrol/.last_seen_joint_positions.conf'. The file is corrupt or missing..
+
+URControl 76.20.31 [] G5 (04-10-2025, 00:25:33)
+2026-02-13_22:09:40:40057 00:00:00:000 INFO    - Applying default console logging configuration for Actin
+2026-02-13_22:09:40:40072 00:00:00:000 INFO    - [ACTIN][3533][default] Actin logging configured
+2026-02-13_22:09:40:49931 00:00:00:000 INFO    - [ACTIN][3533][default] EcShmSyncChannel::EcShmSyncChannel created segment external_axes_bus_sync
+2026-02-13_22:09:40:63577 00:00:00:000 WARNING - PThread::_start: SCHED_FIFO - Failed to set scheduling parameters for WatchdogServiceThread
+2026-02-13_22:09:40:63589 00:00:00:000 INFO    - Runtime state initialized to PROGRAM_STATE_STOPPED
+2026-02-13_22:09:40:63601 00:00:00:000 INFO    - Created directory for the interpreter log
+2026-02-13_22:09:40:63626 00:00:00:000 INFO    - Created inner directory for the interpreter log
+2026-02-13_22:09:40:63639 00:00:00:000 INFO    - Loading calibration from '/workspaces/universal_robots_sdk/ursim-5.24.0.1219432/.urcontrol/calibration.conf'
+2026-02-13_22:09:40:64533 00:00:00:000 WARNING - loadCalibration: Error: Cannot open configuration file '/workspaces/universal_robots_sdk/ursim-5.24.0.1219432/.urcontrol/calibration.conf'. The file is corrupt or missing.
+2026-02-13_22:09:40:64552 00:00:00:000 WARNING - Configuration property "majorVersion" not found in section "Checksum"; setting to default value: "1"
+2026-02-13_22:09:40:64574 00:00:00:000 WARNING - Configuration property "minorVersion" not found in section "Checksum"; setting to default value: "0"
+2026-02-13_22:09:40:64594 00:00:00:000 WARNING - Configuration property "safetyParameters" not found in section "Checksum"; setting to default value: "0"
+2026-02-13_22:09:40:64606 00:00:00:000 INFO    - Safety Version 1:0
+2026-02-13_22:09:40:64621 00:00:00:000 ERROR   - Setup::getSafetyReader Safety version not in scope, version 1.0
+2026-02-13_22:09:40:64633 00:00:00:000 ERROR   - Error: General limits are in violation.
+2026-02-13_22:09:40:64642 00:00:00:000 ERROR   - Error: Max joint speed is in violation.
+2026-02-13_22:09:40:64650 00:00:00:000 ERROR   - Error: Minimum and maximum joint position is in violation for joint 0, Min = 0.034907 and Max = -0.034907
+2026-02-13_22:09:40:64659 00:00:00:000 ERROR   - Error: Minimum and maximum joint position is in violation for joint 1, Min = 0.034907 and Max = -0.034907
+2026-02-13_22:09:40:64672 00:00:00:000 ERROR   - Error: Minimum and maximum joint position is in violation for joint 2, Min = 0.034907 and Max = -0.034907
+2026-02-13_22:09:40:64681 00:00:00:000 ERROR   - Error: Minimum and maximum joint position is in violation for joint 3, Min = 0.034907 and Max = -0.034907
+2026-02-13_22:09:40:64693 00:00:00:000 ERROR   - Error: Minimum and maximum joint position is in violation for joint 4, Min = 0.034907 and Max = -0.034907
+2026-02-13_22:09:40:64704 00:00:00:000 ERROR   - Error: Minimum and maximum joint position is in violation for joint 5, Min = 0.034907 and Max = -0.034907
+2026-02-13_22:09:40:64717 00:00:00:000 ERROR   - Error: TCP orientation deviation is in violation.
+2026-02-13_22:09:40:64722 00:00:00:000 WARNING - Error: Safety configuration values are invalid! Safety.conf file corrupt or missing.
+2026-02-13_22:09:40:67446 00:00:00:002 WARNING - Configuration property "majorVersion" not found in section "Checksum"; setting to default value: "1"
+2026-02-13_22:09:40:67464 00:00:00:002 WARNING - Configuration property "minorVersion" not found in section "Checksum"; setting to default value: "0"
+2026-02-13_22:09:40:67487 00:00:00:002 WARNING - Configuration property "safetyParameters" not found in section "Checksum"; setting to default value: "0"
+2026-02-13_22:09:40:67501 00:00:00:002 INFO    - Safety Version 1:0
+2026-02-13_22:09:40:67513 00:00:00:002 ERROR   - Setup::getSafetyReader Safety version not in scope, version 1.0
+2026-02-13_22:09:40:67522 00:00:00:002 ERROR   - Error: General limits are in violation.
+2026-02-13_22:09:40:67531 00:00:00:002 ERROR   - Error: Max joint speed is in violation.
+2026-02-13_22:09:40:67549 00:00:00:002 ERROR   - Error: Minimum and maximum joint position is in violation for joint 0, Min = 0.034907 and Max = -0.034907
+2026-02-13_22:09:40:67559 00:00:00:002 ERROR   - Error: Minimum and maximum joint position is in violation for joint 1, Min = 0.034907 and Max = -0.034907
+2026-02-13_22:09:40:67604 00:00:00:002 ERROR   - Error: Minimum and maximum joint position is in violation for joint 2, Min = 0.034907 and Max = -0.034907
+2026-02-13_22:09:40:67611 00:00:00:002 ERROR   - Error: Minimum and maximum joint position is in violation for joint 3, Min = 0.034907 and Max = -0.034907
+2026-02-13_22:09:40:67620 00:00:00:002 ERROR   - Error: Minimum and maximum joint position is in violation for joint 4, Min = 0.034907 and Max = -0.034907
+2026-02-13_22:09:40:67631 00:00:00:002 ERROR   - Error: Minimum and maximum joint position is in violation for joint 5, Min = 0.034907 and Max = -0.034907
+2026-02-13_22:09:40:67638 00:00:00:002 ERROR   - Error: TCP orientation deviation is in violation.
+2026-02-13_22:09:40:67644 00:00:00:002 WARNING - Error: Safety configuration values are invalid! Safety.conf file corrupt or missing.
+2026-02-13_22:09:40:68532 00:00:00:002 ERROR   - Crc verification of safety configuration failed: 00000000 79446F2C
+2026-02-13_22:09:40:68544 00:00:00:002 ERROR   -   User parameters : BAD
+2026-02-13_22:09:40:68550 00:00:00:002 ERROR   -   Robot parameters : GOOD
+URControl::handler caught CTRL-C
+2026-02-13_22:09:56:68658 00:00:00:004 WARNING - collectRTOutputData() - time stamp not changed: 0.004000
+2026-02-13_22:09:56:68722 00:00:00:004 INFO    - RTM: Target RobotMode changed from ROBOT_MODE_DISCONNECTED to ROBOT_MODE_CONFIRM_SAFETY
+2026-02-13_22:09:56:68734 00:00:00:004 ERROR   - Cannot revert robot mode from ROBOT_MODE_POWER_OFF to ROBOT_MODE_CONFIRM_SAFETY
+2026-02-13_22:09:56:68743 00:00:00:004 INFO    - New safety mode: SAFETY_MODE_NORMAL
+2026-02-13_22:09:56:70537 00:00:00:006 INFO    - WatchdogService::stopAllWatchdog()
+2026-02-13_22:09:56:72342 00:00:00:006 WARNING - Failed to write joint angles: [0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
+2026-02-13_22:09:56:73339 00:00:00:006 INFO    - Socket "ModbusServerSocket"  disconnected by Socket::close()
+2026-02-13_22:09:56:73348 00:00:00:006 INFO    - Socket "ModbusServerSocket" object was destroyed.
+2026-02-13_22:09:56:73362 00:00:00:006 INFO    - Socket "ReadOnlyMATLABServerSocket"  disconnected by Socket::close()
+2026-02-13_22:09:56:73375 00:00:00:006 INFO    - Socket "ReadOnlyMATLABServerSocket" object was destroyed.
+2026-02-13_22:09:56:73385 00:00:00:006 INFO    - Socket "ReadOnlySecondaryServerSocket"  disconnected by Socket::close()
+2026-02-13_22:09:56:73395 00:00:00:006 INFO    - Socket "ReadOnlySecondaryServerSocket" object was destroyed.
+2026-02-13_22:09:56:73402 00:00:00:006 INFO    - Socket "ReadOnlyPrimaryServerSocket"  disconnected by Socket::close()
+2026-02-13_22:09:56:73410 00:00:00:006 INFO    - Socket "ReadOnlyPrimaryServerSocket" object was destroyed.
+2026-02-13_22:09:56:73422 00:00:00:006 INFO    - Socket "RTDEServerSocket"  disconnected by Socket::close()
+2026-02-13_22:09:56:73430 00:00:00:006 INFO    - Socket "RTDEServerSocket" object was destroyed.
+2026-02-13_22:09:56:73433 00:00:00:006 INFO    - Socket "MATLABServerSocket"  disconnected by Socket::close()
+2026-02-13_22:09:56:73457 00:00:00:006 INFO    - Socket "MATLABServerSocket" object was destroyed.
+2026-02-13_22:09:56:73461 00:00:00:006 INFO    - Socket "InterpreterServerSocket"  disconnected by Socket::close()
+2026-02-13_22:09:56:73471 00:00:00:006 INFO    - Socket "InterpreterServerSocket" object was destroyed.
+2026-02-13_22:09:56:73481 00:00:00:006 INFO    - Socket "SecondaryServerSocket"  disconnected by Socket::close()
+2026-02-13_22:09:56:73485 00:00:00:006 INFO    - Socket "SecondaryServerSocket" object was destroyed.
+2026-02-13_22:09:56:73531 00:00:00:006 INFO    - Socket "PrimaryServerSocket"  disconnected by Socket::close()
+2026-02-13_22:09:56:73540 00:00:00:006 INFO    - Socket "PrimaryServerSocket" object was destroyed.
+URControl::shutdown

@@ -1,0 +1,63 @@
+#
+# NOTE: The SafetyParameters section is protected by a CRC checksum,
+# please use the supplied tool "update_urcontrol_crc.py" in a terminal.
+
+## SafetyParameters ##
+
+[Hardware]
+robot_type = 4 # UR16_DC
+
+[DH]
+a = [0.0, -0.4784, -0.36, 0.0, 0.0, 0.0]
+d = [0.1807, 0.0, 0.0, 0.17415, 0.11985, 0.11655]
+alpha = [1.570796327, 0, 0, 1.570796327, -1.570796327, 0]
+q_home_offset = [0, -1.570796327, 0, -1.570796327, 0, 0]
+joint_direction = [1, 1, -1, 1, 1, 1]
+
+[Link]
+mass = [7.369, 10.45, 4.321, 2.18, 2.033, 0.907]
+center_of_mass = [[0.0, -0.016, 0.03], [0.302, 0.0, 0.16], [0.194, 0.0, 0.065], [0.0, -0.009, 0.011], [0.0, 0.018, 0.012], [0, 0, -0.044]]
+inertia_matrix = [[0.03351, 2e-05, -1e-05, 2e-05, 0.03374, 0.00374, -1e-05, 0.00374, 0.021], [0.02796, -0.0001, -0.0072, -0.0001, 0.47558, 3e-05, -0.0072, -1e-05, 0.47635], [0.01091, 6e-05, 0.01012, 6e-05, 0.1206, 1e-05, 0.01012, 1e-05, 0.11714], [0.00609, -1e-05, -0.0, -1e-05, 0.00245, 0.00083, 0.0, 0.00083, 0.00579], [0.00389, -1e-05, 0.0, -1e-05, 0.00219, -0.00045, 0.0, -0.00045, 0.00363], [0.00117, 0.0, 0.0, 0.0, 0.00118, 0.0, 0.0, 0.0, 0.00084]]
+
+[Geometry]
+radius_wrist3       = 0.045
+radius_lower_arm    = 0.0425
+offset_x3_lower_arm = 0.0484
+
+[Elbow]
+offset = [0, 0, 0.12]
+radius = 0.15
+
+[Joint]
+joint = ['joint_size4_eseries.conf', 'joint_size4_eseries.conf', 'joint_size3_eseries.conf', 'joint_size2_eseries.conf', 'joint_size2_eseries.conf', 'joint_size2_eseries.conf']
+
+## SafetyParameters ##
+
+[Checksum]
+RobotConfig = 397887060
+
+[Joint]
+v_joint_default = 1.0471975511965976
+a_joint_default = 1.3962634015954636
+
+[Tool]
+tcp_pose = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+tcp_payload_mass = 0
+v_tool_default = 0.25
+a_tool_default = 1.2
+eqradius = 0.25
+
+[Link]
+gravity = [0, 0, 9.82]
+
+[Hardware]
+power_supply = 650
+robot_sub_type = 3
+
+[Energy Eater]
+avg_time = 5.0
+energy_eater_type = [0, 1]
+
+[Fan Control]
+ramup_time = 1.0
+ramdown_time = 50.0

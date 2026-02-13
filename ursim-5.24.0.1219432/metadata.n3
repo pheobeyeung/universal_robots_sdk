@@ -1,0 +1,20 @@
+<urn:maven/artifact#com.ur.release:package-g5:12.19.432::tar.gz>
+    <urn:com/ur/metadata#buildNumber> "12.19.432" ;
+    <urn:com/ur/metadata#buildDate> "2025-10-10" ;
+    <urn:com/ur/metadata#marketingVersion> "5.24.0" ;
+    <urn:com/ur/metadata#dependencies> "
+calibration-configuration-g5 = 52.4.4
+yocto-g5 = 2.9.2
+urethernetip-service = 1.18.4
+urcontrol-configuration-g5 = 52.4.4
+ur-profinet-g5-legacy = 1.16.5
+firmware = 50.7.57
+robot-bsp-g5 = 3.11.5
+urcontrol-g5 = 76.20.31
+legal_notices = 1.0.13
+ur-polyscope-platform-g5 = 74.24.167
+urupdate = 1.2.4
+robot-common-g5 = 3.11.5
+robot-installer-g5 = 3.6.0
+python-urtools = 1.4.35
+" .

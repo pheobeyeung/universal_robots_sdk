@@ -1,0 +1,275 @@
+#!/bin/bash
+
+
+do_print_json() {
+    cat << EOF
+{
+    "control-mode": "$1", 
+    "enable-autorun": true, 
+    "firewall": {
+        "interfaces": {
+            "eth0": {}
+        }, 
+        "services": [
+            {
+                "description": "Use the Dashboard Server for remote control of the robot (TCP ports 29919, 29999)", 
+                "id": "Dashboard Server", 
+                "info": {
+                    "local-port-forwards": {
+                        "tcp": [
+                            "29999:29919"
+                        ]
+                    }, 
+                    "ports": {
+                        "tcp": [
+                            "29919", 
+                            "29999"
+                        ]
+                    }
+                }, 
+                "interfaces": [
+                    "eth0"
+                ]
+            }, 
+            {
+                "description": "Use the Primary Client Interface for reading Robot State information and sending URScript to the robot (TCP ports 30001, 30011)", 
+                "id": "Primary Client Interface", 
+                "info": {
+                    "local-port-forwards": {
+                        "tcp": [
+                            "30001:30011"
+                        ]
+                    }, 
+                    "ports": {
+                        "tcp": [
+                            "30001", 
+                            "30011"
+                        ]
+                    }
+                }, 
+                "interfaces": [
+                    "eth0"
+                ]
+            }, 
+            {
+                "description": "Use the Secondary Client Interface for reading Robot State information and sending URScript to the robot (TCP ports 30002, 30012)", 
+                "id": "Secondary Client Interface", 
+                "info": {
+                    "local-port-forwards": {
+                        "tcp": [
+                            "30002:30012"
+                        ]
+                    }, 
+                    "ports": {
+                        "tcp": [
+                            "30002", 
+                            "30012"
+                        ]
+                    }
+                }, 
+                "interfaces": [
+                    "eth0"
+                ]
+            }, 
+            {
+                "description": "Use the Real-Time Interface for reading real-time data from the robot (TCP ports 30003, 30013)", 
+                "id": "Real-Time Client Interface", 
+                "info": {
+                    "local-port-forwards": {
+                        "tcp": [
+                            "30003:30013"
+                        ]
+                    }, 
+                    "ports": {
+                        "tcp": [
+                            "30003", 
+                            "30013"
+                        ]
+                    }
+                }, 
+                "interfaces": [
+                    "eth0"
+                ]
+            }, 
+            {
+                "description": "Use the Real-Time Data Exchange to read and write data to/from the robot (TCP port 30004)", 
+                "id": "Real-Time Data Exchange (RTDE)", 
+                "info": {
+                    "ports": {
+                        "tcp": [
+                            "30004"
+                        ]
+                    }
+                }, 
+                "interfaces": [
+                    "eth0"
+                ]
+            }, 
+            {
+                "description": "Use the Interpreter Mode interface for runtime robot control via URScript (TCP port 30020)", 
+                "id": "Interpreter Mode Socket", 
+                "info": {
+                    "ports": {
+                        "tcp": [
+                            "30020"
+                        ]
+                    }
+                }, 
+                "interfaces": [
+                    "eth0"
+                ]
+            }, 
+            {
+                "description": "Use Modbus TCP for Ethernet-based fieldbus communication with a PLC or other devices (TCP port 502)", 
+                "id": "Modbus TCP", 
+                "info": {
+                    "ports": {
+                        "tcp": [
+                            "502"
+                        ]
+                    }
+                }, 
+                "interfaces": [
+                    "eth0"
+                ]
+            }, 
+            {
+                "description": "Use PROFINET for Ethernet-based fieldbus communication with a PLC (TCP/UDP ports 34962-34964, 40002, 49152)", 
+                "id": "PROFINET", 
+                "info": {
+                    "ports": {
+                        "tcp": [
+                            "34962-34964", 
+                            "40002", 
+                            "49152"
+                        ], 
+                        "udp": [
+                            "34962-34964", 
+                            "40002", 
+                            "49152"
+                        ]
+                    }
+                }, 
+                "interfaces": [
+                    "eth0"
+                ]
+            }, 
+            {
+                "description": "Use EtherNet/IP for Ethernet-based fieldbus communication with a PLC (TCP ports 40000, 44818 and UDP port 2222)", 
+                "id": "EtherNet/IP", 
+                "info": {
+                    "ports": {
+                        "tcp": [
+                            "40000", 
+                            "44818"
+                        ], 
+                        "udp": [
+                            "2222"
+                        ]
+                    }
+                }, 
+                "interfaces": [
+                    "eth0"
+                ]
+            }
+        ]
+    }, 
+    "ssh": {
+        "authentication": "both", 
+        "keys": [], 
+        "port-forward": "enable", 
+        "state": "enable"
+    }, 
+    "uradmin": "v1"
+}
+EOF
+}
+
+
+
+
+CMODE_FILE=$HOME/.uradmin-control-mode.txt
+
+cmode='local'
+[ -f $CMODE_FILE ] && cmode=$(cat $CMODE_FILE)
+
+print_state=false
+
+
+
+
+uradmin_control_mode() {
+    while [ "$#" -gt 0 ]; do
+        case "$1" in
+        local|remote)
+	    cmode="$1"
+	    ;;
+        --print-state)
+	    print_state=true
+	    ;;
+        esac
+	shift
+    done
+
+    echo "$cmode" > $CMODE_FILE
+    [ "$print_state" = true ] && do_print_json "$cmode"
+}
+
+
+uradmin_print() {
+    do_print_json "$cmode"
+}
+
+
+uradmin_something() {
+    while [ "$#" -gt 0 ]; do
+        case "$1" in
+        --print-state)
+            ;;
+        esac
+        shift
+    done
+
+    [ "$print_state" = true ] && do_print_json "$cmode"
+}
+
+
+uradmin() {
+    while [ "$#" -gt 0 ]; do
+        case "$1" in
+        -*)
+            ;;
+        *)
+            break
+	    ;;
+        esac
+	shift
+    done
+
+    command="$1"
+    shift
+
+    case "$command" in
+    control-mode)
+        uradmin_control_mode $@
+	;;
+    print)
+        uradmin_print $@
+        ;;
+    *)
+        uradmin_something $@
+	;;
+    esac
+}
+
+
+case $(basename "$0") in
+uradmin)
+    uradmin $@
+    ;;
+*)
+    uradmin "$(echo $0 | cut -d- -f2-)" $@
+    ;;
+esac
+
+exit 0

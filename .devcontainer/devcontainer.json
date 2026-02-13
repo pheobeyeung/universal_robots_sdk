@@ -1,6 +1,22 @@
 {
 	"name": "UR SDK",
 	"build":{"dockerfile": "Dockerfile"},
+	"forwardPorts": [6080, 5900, 29999, 22],
+	"portsAttributes": {
+		"6080": {
+			"label": "URSim noVNC",
+			"onAutoForward": "openBrowser"
+		},
+		"5900": {
+			"label": "URSim VNC"
+		},
+		"29999": {
+			"label": "UR Dashboard Server"
+		},
+		"22": {
+			"label": "URSim SSH"
+		}
+	},
   	// Use the LOCAL_WORKSPACE_FOLDER environment variable if you need to bind mount local source code into container.
 	"remoteEnv": {
 		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
@@ -18,6 +34,6 @@
 				"yzhang.markdown-all-in-one"]
 			}	
       },
-	  "postStartCommand": "sudo chmod +x newURCap.sh && chmod +x startURSim.sh"
+	  "postStartCommand": "chmod +x /workspaces/universal_robots_sdk/scripts/start-ursim-web.sh /workspaces/universal_robots_sdk/ursim-5.24.0.1219432/install.sh || true"
 }
 

@@ -1,0 +1,16 @@
+Import('env')
+
+libservice_source = Split('''AbyssServer.cpp
+                             XMLRPCMethods.cpp
+                          ''')
+
+libservice_CPPPATH = Split('''.
+                              ..
+                              ../rti
+                           ''')
+
+###############################################################################
+
+env.Library(target = 'service',
+            source = libservice_source,
+            CPPPATH = [libservice_CPPPATH, env['CPPPATH']])

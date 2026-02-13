@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                padding: 10px 0px 0px 0px;
+            }
+            div {
+                padding-top: 10px;
+                padding-bottom: 20px;
+            }
+            input {
+                display: inline-block;
+                width: 200px;
+                height: 28px;
+                font-size: 18px;
+            }
+            label{
+                display: inline-block;
+                width: 500px;
+                height: 36px;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <div>
+                <p>
+                    Each time this node and its children are run, the counting variable will increment by one.<br>
+                    Select an existing variable or create your own.
+                </p>
+                <p>
+                    The variable is visible in the Variables tab, and can be used to trigger actions<br>
+                    elsewhere in the program.
+                </p>
+                <div>
+                    <select id="comboVariables"></select>
+                </div>
+                <div>
+                    <p>Input variable name and press the "Create new" button</p>
+                    <br>
+                    <input id="inputVariableName" />
+                    <input type="button" id="btnCreateNew" value="Create new" />
+                </div>
+                <div>
+                    <label id="errorLabel"/>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

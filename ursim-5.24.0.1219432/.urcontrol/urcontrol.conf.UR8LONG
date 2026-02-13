@@ -1,0 +1,63 @@
+#
+# NOTE: The SafetyParameters section is protected by a CRC checksum,
+# please use the supplied tool "update_urcontrol_crc.py" in a terminal.
+
+## SafetyParameters ##
+
+[Hardware]
+robot_type = 6 # UR8LONG
+
+[DH]
+a = [0.0, -0.8989, -0.7149, 0.0, 0.0, 0.0]
+d = [0.2186, 0.0, 0.0, 0.1824, 0.1361, 0.1434]
+alpha = [1.570796327, 0, 0, 1.570796327, -1.570796327, 0]
+q_home_offset = [0, -1.570796327, 0, -1.570796327, 0, 0]
+joint_direction = [1, 1, -1, 1, 1, 1]
+
+[Link]
+mass = [9.9883, 17.0738, 7.6393, 2.089, 2.0869, 1.0666]
+center_of_mass = [[2.4e-05, -0.033309, 0.025304], [0.565429, -7.4e-05, 0.19542], [0.416102, 5.8e-05, 0.065663], [2.5e-05, -0.019695, 0.016413], [2.5e-05, 0.01996, 0.015886], [-1.8e-05, -0.000112, -0.053397]]
+inertia_matrix = [[0.051334, 2.5e-05, -1.6e-05, 2.5e-05, 0.047702, 0.008805, -1.6e-05, 0.008805, 0.034263], [0.056709, 0.000292, -0.054852, 0.000292, 2.44012, -1.4e-05, -0.054852, -1.4e-05, 2.432744], [0.022148, 5.2e-05, 0.019779, 5.2e-05, 0.633274, 3e-06, 0.019779, 3e-06, 0.625889], [0.004339, 1.9e-05, 1e-06, 1.9e-05, 0.002548, 0.000706, 1e-06, 0.000706, 0.003912], [0.004288, 1.7e-05, -3e-06, 1.7e-05, 0.002566, -0.000716, -3e-06, -0.000716, 0.003927], [0.001406, -3e-06, 1e-05, -3e-06, 0.001404, -2.4e-05, 1e-05, -2.4e-05, 0.001002]]
+
+[Geometry]
+radius_wrist3       = 0.045
+radius_lower_arm    = 0.0455
+offset_x3_lower_arm = 0.0463
+
+[Elbow]
+offset = [0, 0, 0.1337]
+radius = 0.15
+
+[Joint]
+joint = ['joint_size4_gen6_v2.conf', 'joint_size4_gen6_v2.conf', 'joint_size3_gen6.conf', 'joint_size2_gen6.conf', 'joint_size2_gen6.conf', 'joint_size2_gen6.conf']
+
+## SafetyParameters ##
+
+[Checksum]
+RobotConfig = 830871039
+
+[Joint]
+v_joint_default = 1.0471975511965976
+a_joint_default = 1.3962634015954636
+
+[Tool]
+tcp_pose = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+tcp_payload_mass = 0
+v_tool_default = 0.25
+a_tool_default = 1.2
+eqradius = 0.25
+
+[Link]
+gravity = [0, 0, 9.82]
+
+[Hardware]
+power_supply = 1500
+robot_sub_type = 3
+
+[Energy Eater]
+avg_time = 5.0
+energy_eater_type = 1
+
+[Fan Control]
+ramup_time = 1.0
+ramdown_time = 50.0

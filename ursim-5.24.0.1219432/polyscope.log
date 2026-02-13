@@ -1,0 +1,4 @@
+2026-02-13 21:50:41.069 WARN  -  Default charset encoding is not UTF-8 it's US-ASCII {thread: Thread-2 , loggerClass: gui.main.URGUI}
+2026-02-13 21:50:41.072 INFO  -  Starting Universal Robots GUI {thread: Thread-2 , loggerClass: gui.main.URGUI}
+2026-02-13 22:09:45.235 WARN  -  Default charset encoding is not UTF-8 it's US-ASCII {thread: Thread-2 , loggerClass: gui.main.URGUI}
+2026-02-13 22:09:45.240 INFO  -  Starting Universal Robots GUI {thread: Thread-2 , loggerClass: gui.main.URGUI}
